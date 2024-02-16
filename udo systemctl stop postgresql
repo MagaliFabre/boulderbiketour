@@ -1,0 +1,13 @@
+[0;1;31m×[0m postgresql.service - PostgreSQL database server
+     Loaded: loaded (]8;;file://magali-82qq/usr/lib/systemd/system/postgresql.service/usr/lib/systemd/system/postgresql.service]8;;; [0;1;38;5;185mdisabled[0m; preset: [0;1;38;5;185mdisabled[0m)
+     Active: [0;1;31mfailed[0m (Result: exit-code) since Thu 2024-02-15 14:58:55 CET; 26s ago
+    Process: 15883 ExecStartPre=/usr/bin/postgresql-check-db-dir ${PGROOT}/data [0;1;31m(code=exited, status=1/FAILURE)[0m
+        CPU: 36ms
+
+févr. 15 14:58:55 magali-82qq systemd[1]: Starting PostgreSQL database server...
+févr. 15 14:58:55 magali-82qq postgres[15883]: "/var/lib/postgres/data" is missing or empty. Use a command like
+févr. 15 14:58:55 magali-82qq postgres[15883]:   su -l postgres -c "initdb --locale=C.UTF-8 --encoding=UTF8 -D '/var/lib/postgres/data'"
+févr. 15 14:58:55 magali-82qq postgres[15883]: with relevant options, to initialize the database cluster.
+févr. 15 14:58:55 magali-82qq systemd[1]: [0;1;39m[0;1;31m[0;1;39mpostgresql.service: Control process exited, code=exited, status=1/FAILURE[0m
+févr. 15 14:58:55 magali-82qq systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mpostgresql.service: Failed with result 'exit-code'.[0m
+févr. 15 14:58:55 magali-82qq systemd[1]: [0;1;31m[0;1;39m[0;1;31mFailed to start PostgreSQL database server.[0m
