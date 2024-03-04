@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Chemin vers l'exécutable Foreman
+FOREMAN_PATH="/home/magali/.gem/ruby/3.0.0/bin/foreman"
+
+# Vérifier si l'exécutable Foreman existe
+if [ -x "$FOREMAN_PATH" ]; then
+    # Exécuter Foreman avec le fichier Procfile.dev
+    "$FOREMAN_PATH" start -f Procfile.dev
+else
+    echo "Erreur: Foreman n'a pas été trouvé."
+    exit 1
+fi
